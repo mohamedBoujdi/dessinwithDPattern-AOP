@@ -8,8 +8,6 @@ import java.util.List;
 
 public class GroupFigure extends Figure {
     private List<Figure> figures=new ArrayList<>();
-
-
     @Override
     public double perimetre() {
         return figures.stream().mapToDouble(Figure::perimetre).sum();

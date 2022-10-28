@@ -16,10 +16,32 @@ la couleur du contour et la couleur de remplissage.
 
 ### 1 - Modélisation "Diagramme de classe du modèle"
 #### design pattern utilisé
-- Design pattern Strategy 
-- Design pattern Observer
-- Design pattern Composite
 ![Diagramme de classe](ExamenBlancDesignPattern.png)
 
 ### 2 - Implémentation de modèle
+![Diagramme de classe](struct.png)
+#### design pattern utilisé
+- Design pattern Strategy
+   -Dessin (Context)
+    ![Diagramme de classe](context.png)
+   -Traitement (Strategy)
+
+![Diagramme de classe](strategy.png)
+- Design pattern Composite
+    -Figure
+![Diagramme de classe](figure.png)
+    -Cercle
+
+![Diagramme de classe](cercle.png)
+    -Rectangle
+
+![Diagramme de classe](rectange.png)
+    -GroupFigure
+![Diagramme de classe](groupfigures.png)
+- Design pattern Observer
+    - Parametrage(Topic)
+  ![Diagramme de classe](topic.png)
+    - Figure(subscriber)
+
+
 

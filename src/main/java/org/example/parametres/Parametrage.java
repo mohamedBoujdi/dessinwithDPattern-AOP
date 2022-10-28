@@ -10,14 +10,26 @@ import java.util.List;
 //@Data
 @Getter
 public class Parametrage implements Observable {
-    //observers
-   //exclude field from lombok
     @FieldNameConstants.Exclude
     private List<Figure> observers;
     private int epaisseurContour;
     private int couleurContour;
     private int couleurRemplissage;
 
+    @Override
+    public void addObserver(Figure obs) {
+        observers.add(obs);
+    }
+    @Override
+    public void removeObserver(Figure obs) {
+        observers.remove(obs);
+    }
+    @Override
+    public void notifyObserver() {
+        if (observers != null) {
+            observers.stream().forEach(obs->obs.update(this));
+        }
+    }
     public Parametrage(int epaisseurContour, int couleurContour, int couleurRemplissage) {
         this.epaisseurContour = epaisseurContour;
         this.couleurContour = couleurContour;
@@ -41,26 +53,8 @@ public class Parametrage implements Observable {
         this.couleurContour=couleurContour;
         notifyObserver();
     }
-
     public void setCouleurRemplissage(int couleurRemplissage) {
         this.couleurRemplissage=couleurRemplissage;
         notifyObserver();
-    }
-
-    @Override
-    public void addObserver(Figure obs) {
-        observers.add(obs);
-    }
-
-    @Override
-    public void removeObserver(Figure obs) {
-            observers.remove(obs);
-    }
-
-    @Override
-    public void notifyObserver() {
-        if (observers != null) {
-            observers.stream().forEach(obs->obs.update(this));
-        }
     }
 }

@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-
 public class Cercle extends Figure{
     private int rayon;
 
