@@ -21,27 +21,28 @@ la couleur du contour et la couleur de remplissage.
 ### 2 - Implémentation de modèle
 ![Diagramme de classe](struct.png)
 #### design pattern utilisé
-- Design pattern Strategy
-   -Dessin (Context)
+##### Design pattern Strategy
+   - **Dessin (Context)**
     ![Diagramme de classe](context.png)
-   -Traitement (Strategy)
+   - **Traitement (Strategy)**
 
 ![Diagramme de classe](strategy.png)
 - Design pattern Composite
-    -Figure
+    - **Figur**e
 ![Diagramme de classe](figure.png)
-    -Cercle
 
+    - **Cercle**
 ![Diagramme de classe](cercle.png)
-    -Rectangle
 
+     -  **Rectangle**
 ![Diagramme de classe](rectange.png)
-    -GroupFigure
+
+    - **GroupFigure**
 ![Diagramme de classe](groupfigures.png)
 - Design pattern Observer
-    - Parametrage(Topic)
+    - **Parametrage(Topic)**
   ![Diagramme de classe](topic.png)
-    - Figure(subscriber)
+    - **Figure(subscriber)**
 
 
 
