@@ -1,5 +1,10 @@
 package org.example.figures;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class Cercle extends Figure{
     private int rayon;
 

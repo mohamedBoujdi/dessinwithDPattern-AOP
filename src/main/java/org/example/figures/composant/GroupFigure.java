@@ -1,8 +1,10 @@
-package org.example.figures;
+package org.example.figures.composant;
+
+import org.example.figures.Figure;
 
 import java.util.List;
 
-public class GroupFigure extends Figure  {
+public class GroupFigure extends Figure {
     private List<Figure> figures;
     @Override
     public double perimetre() {

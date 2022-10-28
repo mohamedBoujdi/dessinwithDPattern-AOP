@@ -1,5 +1,10 @@
 package org.example.figures;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class Rectangle extends Figure{
     private float L;
     private float H;
