@@ -3,7 +3,7 @@ package org.example.traitement;
 import org.example.figures.Figure;
 import org.example.parametres.Parameterage;
 
-public class epaisserCounteur implements TraitementStrategy {
+public class EpaisserCounteur implements TraitementStrategy {
     @Override
     public void traiter(Figure figure) {
         //traiter epaisseur les figures
