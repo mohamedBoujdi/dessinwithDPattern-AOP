@@ -20,9 +20,7 @@ public class GroupFigure extends Figure {
     public void dessiner() {
         //show group figure
     System.out.println("GroupFigure:");
-    for (Figure figure : figures) {
-        figure.dessiner();
-    }
+        figures.forEach(Figure::dessiner);
     }
 
     public void addFigure(Figure figure) {

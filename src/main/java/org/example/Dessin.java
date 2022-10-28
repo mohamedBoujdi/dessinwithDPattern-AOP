@@ -3,14 +3,19 @@ package org.example;
 import org.example.figures.Figure;
 import org.example.traitement.TraitementStrategy;
 
+import java.util.List;
+
 public class Dessin {
-    private Figure[] figures;
+    private List<Figure> figures;
     private TraitementStrategy traitementStrategy;
 
-    public Dessin(Figure[] figures) {
-        this.figures = figures;
+    public Dessin(Figure figures) {
+        this.figures.add(figures);
     }
 
+    public void setTraitement(TraitementStrategy traitementStrategy) {
+        this.traitementStrategy = traitementStrategy;
+    }
     public void affiche() {
         for (Figure figure : figures) {
             figure.dessiner();
@@ -18,8 +23,5 @@ public class Dessin {
     }
     public void serialize() {
         // TODO
-    }
-    public void setTraitement(TraitementStrategy traitementStrategy) {
-        this.traitementStrategy = traitementStrategy;
     }
 }

@@ -11,5 +11,9 @@ public abstract class Figure {
     public abstract double perimetre();
     public abstract double surface();
     public abstract void dessiner();
+    //observer update
+    public void update(Parameterage parameterage){
+        this.parameterage=parameterage;
+    }
 }
 
