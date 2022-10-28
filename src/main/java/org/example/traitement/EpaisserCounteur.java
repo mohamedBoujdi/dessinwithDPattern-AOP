@@ -1,14 +1,17 @@
 package org.example.traitement;
 
+import org.example.Dessin;
 import org.example.figures.Figure;
-import org.example.parametres.Parameterage;
+import org.example.parametres.Parametrage;
 
 public class EpaisserCounteur implements TraitementStrategy {
     @Override
-    public void traiter(Figure figure) {
+    public void traiter(Dessin dessin) {
         //traiter epaisseur les figures
-        Parameterage parameterage = new Parameterage();
-        parameterage.setEpaisseurContour(figure.getParameterage().getEpaisseurContour()+ 1);
-        figure.setParameterage(parameterage);
+        Parametrage parametrage = new Parametrage();
+        dessin.getFigures().stream().forEach(figure -> {
+            parametrage.setEpaisseurContour(figure.getParametrage().getEpaisseurContour()+ 1);
+            figure.setParametrage(parametrage);
+        });
     }
 }

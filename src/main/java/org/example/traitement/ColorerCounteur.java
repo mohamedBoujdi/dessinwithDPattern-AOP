@@ -1,14 +1,17 @@
 package org.example.traitement;
 
+import org.example.Dessin;
 import org.example.figures.Figure;
-import org.example.parametres.Parameterage;
+import org.example.parametres.Parametrage;
 
 public class ColorerCounteur implements TraitementStrategy {
     @Override
-    public void traiter(Figure figure) {
+    public void traiter(Dessin dessin) {
          //traiter la couleur de la figures
-        Parameterage parameterage = new Parameterage();
-        parameterage.setCouleurContour(132);
-        figure.setParameterage(parameterage);
+        Parametrage parametrage1 = new Parametrage();
+        dessin.getFigures().stream().forEach(figure -> {
+            parametrage1.setCouleurContour(figure.getParametrage().getCouleurContour()+ 1);
+            figure.setParametrage(parametrage1);
+        });
     }
 }

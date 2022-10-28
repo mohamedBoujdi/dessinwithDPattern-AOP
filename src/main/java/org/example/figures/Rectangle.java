@@ -4,10 +4,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 public class Rectangle extends Figure{
     private float L;
     private float H;
+
+    public Rectangle() {
+        this.L = 1;
+        this.H = 1;
+    }
     @Override
     public double perimetre() {
             return (L+H)*2;

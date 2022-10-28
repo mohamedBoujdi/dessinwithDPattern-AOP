@@ -1,6 +1,5 @@
 package org.example.parametres;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.experimental.FieldNameConstants;
 import org.example.figures.Figure;
@@ -10,7 +9,7 @@ import java.util.List;
 
 //@Data
 @Getter
-public class Parameterage implements Observable {
+public class Parametrage implements Observable {
     //observers
    //exclude field from lombok
     @FieldNameConstants.Exclude
@@ -19,13 +18,13 @@ public class Parameterage implements Observable {
     private int couleurContour;
     private int couleurRemplissage;
 
-    public Parameterage(int epaisseurContour, int couleurContour, int couleurRemplissage) {
+    public Parametrage(int epaisseurContour, int couleurContour, int couleurRemplissage) {
         this.epaisseurContour = epaisseurContour;
         this.couleurContour = couleurContour;
         this.couleurRemplissage = couleurRemplissage;
         notifyObserver();
     }
-    public Parameterage() {
+    public Parametrage() {
         //by default
         this.epaisseurContour = 1;
         this.couleurContour = 0;
@@ -60,6 +59,8 @@ public class Parameterage implements Observable {
 
     @Override
     public void notifyObserver() {
-       observers.stream().forEach(obs->obs.update(this));
+        if (observers != null) {
+            observers.stream().forEach(obs->obs.update(this));
+        }
     }
 }

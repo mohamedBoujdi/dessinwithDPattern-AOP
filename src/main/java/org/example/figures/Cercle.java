@@ -4,10 +4,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+
 public class Cercle extends Figure{
     private int rayon;
 
+    public Cercle() {
+        this.rayon =1;
+    }
     @Override
     public double perimetre() {
             return 2*Math.PI*rayon;//2*PI*r

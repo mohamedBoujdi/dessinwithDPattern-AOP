@@ -1,11 +1,15 @@
 package org.example.figures.composant;
 
+import lombok.Data;
 import org.example.figures.Figure;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GroupFigure extends Figure {
-    private List<Figure> figures;
+    private List<Figure> figures=new ArrayList<>();
+
+
     @Override
     public double perimetre() {
         return figures.stream().mapToDouble(Figure::perimetre).sum();
