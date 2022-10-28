@@ -25,10 +25,9 @@ la couleur du contour et la couleur de remplissage.
    - **Dessin (Context)**
     ![Diagramme de classe](context.png)
    - **Traitement (Strategy)**
-
 ![Diagramme de classe](strategy.png)
 - Design pattern Composite
-    - **Figur**e
+    - **Figure**
 ![Diagramme de classe](figure.png)
 
     - **Cercle**
